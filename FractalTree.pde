@@ -13,12 +13,23 @@ public void draw()
 	background(0);   
 	stroke(0,255,0);   
 	line(320,480,320,380);   
-	drawBranches(320,380,100,3*Math.PI/2);  //will add later 
+	drawBranches(320,380,100,3*Math.PI/2); 
+	//try to ge this to work
+	keyTyped();
+
 } 
 
-public void mousePressed()
+public void keyTyped()
 {
-  storke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));	
+  if(key=='a'&&/* branchAngle!=.60 &&*/ branchAngle<=.80)
+  	branchAngle+=.001;
+  if(branchAngle==.80)
+  	redraw(); 
+  if(key=='d') 
+  	smallestBranch+=.5;
+redraw();  
+
+  //stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));	
 }
 
 public void drawBranches(int x,int y, double branchLength, double angle) 
@@ -38,8 +49,7 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 
   if(branchLength>smallestBranch)
   {
-    drawBranches(endX1,endY1,angle1,angle2);
-    drawBranches(endX2,endY2,angle1,angle2);
+    drawBranches(endX1,endY1,branchLength/1.1,angle1);
+    drawBranches(endX2,endY2,branchLength/1.8,angle2);
   }
-
-} 
+}
