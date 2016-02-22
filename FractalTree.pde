@@ -1,6 +1,8 @@
 private double fractionLength = 12; 
 private int smallestBranch = 4; 
 private double branchAngle = .40;  
+//turn back after reaching a point
+private double trnb = .006;
 
 public void setup() 
 {   
@@ -21,15 +23,19 @@ public void draw()
 
 public void keyTyped()
 {
-  if(key=='a'&&/* branchAngle!=.60 &&*/ branchAngle<=.80)
-  	branchAngle+=.001;
-  if(branchAngle==.80)
-  	redraw(); 
-  if(key=='d') 
-  	smallestBranch+=.5;
+  if(key=='a')
+  {	
+ 	branchAngle+=trnb;
+ 	stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+
+  } 
+  if(branchAngle>=.805)
+  	trnb= -.004; 
+  stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+  if(branchAngle<=.1)
+  	trnb= -.5;
 redraw();  
 
-  //stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));	
 }
 
 public void drawBranches(int x,int y, double branchLength, double angle) 
