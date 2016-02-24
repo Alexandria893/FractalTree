@@ -1,5 +1,5 @@
-private double fractionLength = 2; 
-private int smallestBranch = 6; 
+private double fractionLength = 1; 
+private int smallestBranch = 5; 
 private double branchAngle = .40;  
 //turn back after reaching a point
 private double trnb = .008;
