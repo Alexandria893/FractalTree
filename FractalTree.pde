@@ -28,10 +28,11 @@ public void keyTyped()
  	branchAngle+=trnb;
  	stroke((int)(Math.random()*255),(int)(Math.random()*50),(int)(Math.random()*255));
   } 
-  if(branchAngle>=.808)
-  	trnb= -.004; 
-  if(branchAngle<=.1)
-  	trnb= -.5;
+  if(branchAngle>=.9)
+  	trnb= -.010; 
+  if(branchAngle<=-.9)
+  	trnb=.008;
+
 redraw();
 }
 
@@ -56,3 +57,5 @@ public void drawBranches(int x,int y, double branchLength, double angle)
     drawBranches(endX2,endY2,branchLength/1.8,angle2);
   }
 }
+
+
