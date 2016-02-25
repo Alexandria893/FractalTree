@@ -1,4 +1,4 @@
-private double fractionLength = 1; 
+private double fractionLength = .8; 
 private int smallestBranch = 5; 
 private double branchAngle = .40;  
 //turn back after reaching a point
