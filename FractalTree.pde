@@ -16,7 +16,7 @@ public void draw()
 	stroke(255,0,0);   
 	line(320,480,320,380);   
 	drawBranches(320,380,100,3*Math.PI/2); 
-	keyTyped();
+	//keyTyped();
 
 } 
 
@@ -25,7 +25,7 @@ public void keyTyped()
   if(key=='a')
   {	
  	branchAngle+=trnb;
-	//stroke((int)(Math.random()*235),(int)(Math.random()*110),(int)(Math.random()*200));
+	stroke((int)(Math.random()*200),(int)(Math.random()*150),0);
   } 
   if(branchAngle>=.9)
   	trnb= -.010; 
