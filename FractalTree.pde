@@ -13,7 +13,7 @@ public void setup()
 public void draw() 
 {   
 	background(0);   
-	stroke(0,255,0);   
+	stroke(255,0,0);   
 	line(320,480,320,380);   
 	drawBranches(320,380,100,3*Math.PI/2); 
 	keyTyped();
@@ -25,7 +25,7 @@ public void keyTyped()
   if(key=='a')
   {	
  	branchAngle+=trnb;
- 	stroke((int)(Math.random()*255),(int)(Math.random()*10),(int)(Math.random()*200));
+	//stroke((int)(Math.random()*235),(int)(Math.random()*110),(int)(Math.random()*200));
   } 
   if(branchAngle>=.9)
   	trnb= -.010; 
