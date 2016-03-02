@@ -25,10 +25,10 @@ public void keyTyped()
   if(key=='a')
   {	
  	branchAngle+=trnb;
-	stroke((int)(Math.random()*200),(int)(Math.random()*150),0);
+	stroke((int)(Math.random()*200),(int)(Math.random()*30),0);
   } 
   if(branchAngle>=.9)
-  	trnb= -.010; 
+  	trnb= -.008; 
   if(branchAngle<=-.9)
   	trnb=.008;
 
