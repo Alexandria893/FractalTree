@@ -35,6 +35,19 @@ public void keyTyped()
 redraw();
 }
 
+public void mousePressed()
+{
+	branchAngle+=trnb;
+	stroke((int)(Math.random()*200),(int)(Math.random()*30),0);
+ 
+  if(branchAngle>=.9)
+  	trnb= -.008; 
+  if(branchAngle<=-.9)
+  	trnb=.008;
+
+redraw();
+}
+
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
 //holds angle of branches  	
