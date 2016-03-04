@@ -2,7 +2,7 @@ private double fractionLength = .91;
 private int smallestBranch = 1; 
 private double branchAngle = .40;  
 //turn back after reaching a point
-private double trnb = .008;
+private double trnb = .05;
 
 public void setup() 
 {   
@@ -20,7 +20,7 @@ public void draw()
 
 } 
 
-public void keyTyped()
+/*public void keyTyped()
 {
   if(key=='a')
   {	
@@ -28,22 +28,21 @@ public void keyTyped()
 	stroke((int)(Math.random()*200),(int)(Math.random()*30),0);
   } 
   if(branchAngle>=.9)
-  	trnb= -.008; 
+  	trnb= -.05; 
   if(branchAngle<=-.9)
-  	trnb=.008;
+  	trnb=.05;
 
 redraw();
-}
+}*/
 
 public void mousePressed()
 {
 	branchAngle+=trnb;
-	stroke((int)(Math.random()*200),(int)(Math.random()*30),0);
  
   if(branchAngle>=.9)
-  	trnb= -.008; 
+  	trnb= -.05; 
   if(branchAngle<=-.9)
-  	trnb=.008;
+  	trnb=.05;
 
 redraw();
 }
